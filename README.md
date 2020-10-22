@@ -139,3 +139,14 @@ SELECT COUNT(type) FROM address_book
 SELECT*FROM address_book;
 ```
 
+### UC11  -  Ability to add person to both Friend and Family
+```
+  INSERT INTO address_book(firstName,lastName,address,city,state,zip,phnNum,email,type) VALUES
+    -> ('rohit','bandi','ram nagar','bhopal','Madhya pradesh',42834,12323121,'rohitbandi@gmail.com','Friends'),
+    -> ('rahul','konda','ambedkar nagar','hanamkonda','Telangana',56325,12413235,'rahulkonda@gmail.com','Family');
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
+
