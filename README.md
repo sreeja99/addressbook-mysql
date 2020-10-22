@@ -56,3 +56,12 @@ UPDATE address_book set state='andhra pradesh' where firstName='sreeja';
 ```
 SELECT*FROM address_book;
 ```
+
+### UC5 - Ability To Delete Existing Contact with Name
+```
+DELETE FROM address_book WHERE firstName='krishna';
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
