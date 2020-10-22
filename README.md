@@ -130,3 +130,12 @@ SELECT*FROM address_book;
 ```
 SELECT*FROM address_book;
 ```
+### UC10  -  Ability to get number of contact persons(count by type)
+```
+SELECT COUNT(type) FROM address_book
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
+
