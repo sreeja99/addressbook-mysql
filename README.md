@@ -82,3 +82,24 @@ SELECT*FROM address_book;
 ```
 SELECT*FROM address_book;
 ```
+### UC7 -  Ability to understand the size of address book by City and State
+### count of number of cities
+```
+SELECT COUNT(city) FROM address_book;
+```
+### count of number of states
+```
+SELECT COUNT(state) FROM address_book;
+```
+### count of contacts having same state
+```
+SELECT COUNT(state) FROM address_book WHERE state='andhra pradesh';
+```
+### count of contacts having same city
+```
+SELECT COUNT(city) FROM address_book WHERE city='wgl';
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
