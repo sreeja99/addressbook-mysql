@@ -43,3 +43,16 @@ INSERT INTO address_book(firstName,lastName,address,city,state,zip,phnNum,email)
 ```
 SELECT*FROM address_book;
 ```
+### UC4 - Ability To Edit Existing Contact with Name
+### changing city for given name
+```
+UPDATE address_book set city='medak' where firstName='krishna';
+```
+### changing state for given name
+```
+UPDATE address_book set state='andhra pradesh' where firstName='sreeja';
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
