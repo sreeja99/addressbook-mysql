@@ -65,3 +65,20 @@ DELETE FROM address_book WHERE firstName='krishna';
 ```
 SELECT*FROM address_book;
 ```
+### UC6  -Ability to Retrieve Person belonging to a City or State 
+### contact of person belonging to particular state
+```
+ SELECT * FROM address_book WHERE state='telangana';
+```
+### contact of person belonging to particular city
+```
+ SELECT * FROM address_book WHERE city='wgl';
+```
+### contact of person belonging to particular state and city
+```
+ SELECT * FROM address_book WHERE state='telangana' and city='hyderabad';
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
