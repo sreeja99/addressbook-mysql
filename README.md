@@ -103,3 +103,14 @@ SELECT COUNT(city) FROM address_book WHERE city='wgl';
 ```
 SELECT*FROM address_book;
 ```
+### UC8  - Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+### for a given city ,sort contacts in alphabetical order
+```
+ SELECT * FROM address_book WHERE city='wgl'
+    -> ORDER BY firstName;
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
+
