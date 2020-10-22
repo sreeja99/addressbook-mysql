@@ -113,4 +113,20 @@ SELECT*FROM address_book;
 ```
 SELECT*FROM address_book;
 ```
-
+### UC9 -  Ability to identify each Address Book with name and Type.
+```
+ ALTER TABLE address_book ADD type VARCHAR(300) AFTER email;
+ update address_book set type='Family' where firstName='aarush';
+ update address_book set type='Friends' where firstName='sreeja';
+ update address_book set type='Professional' where firstName='harini';
+ update address_book set type='Family' where firstName='aditya';
+```
+### showing which is of which type and grouping by type
+```
+ SELECT type,firstName FROM address_book;
+ SELECT type,firstName FROM address_book group by type;
+```
+### viewing address book
+```
+SELECT*FROM address_book;
+```
