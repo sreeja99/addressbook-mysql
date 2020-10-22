@@ -31,3 +31,15 @@ CREATE TABLE address_book
 ```
 DESCRIBE address_book;
 ```
+### UC3 - Insert new contacts to address book
+```
+INSERT INTO address_book(firstName,lastName,address,city,state,zip,phnNum,email) VALUES
+    -> ('sreeja','godishala','hnk','wgl','telangana',1234,1234567,'srijagodishala@gmail.com'),
+    -> ('krishna','sodha','naimnagar','karimnagar','telangana',874884,12340987,'krishna121@gmail.com'),
+    -> ('aarush','sharma','madhavnagar','wgl','telangana',32341,4321453332,'aarushsharama@gmail.com');
+    -> ('harini','burra','bank colony','huzrabad','andra pradesh',43453,12334231,'sriharini35@gmail.com');
+```
+### View address book
+```
+SELECT*FROM address_book;
+```
