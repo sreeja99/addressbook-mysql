@@ -149,4 +149,65 @@ SELECT*FROM address_book;
 ```
 SELECT*FROM address_book;
 ```
+### UC13 - Ensure all queries are done
+### create table address_book and Contacts
+```
+ CREATE TABLE Address_book_name_and_type
+    -> (
+    ->  Address_book_name          VARCHAR(20) NOT NULL PRIMARY KEY,
+    ->  Address_book_type            VARCHAR(100) NOT NULL
+    -> );
+
+mysql> CREATE TABLE Contacts
+    -> (
+    ->  first_name        VARCHAR(100) NOT NULL,
+    ->  last_name         VARCHAR(100) NOT NULL,
+    ->  Address_book_name VARCHAR(20) REFERENCES Address_book_name_and_type( Address_book_name),
+    ->  Address           VARCHAR(100) NOT NULL,
+    ->  City              VARCHAR(100) NOT NULL,
+    ->  State             VARCHAR(100) NOT NULL,
+    ->  Phone_Number      VARCHAR(100) NOT NULL,
+    ->  Email_id          VARCHAR(100) NOT NULL,
+    ->  Zip               INT(20) NOT NULL
+    -> );
+```
+### insert into address book
+```
+ INSERT INTO  Address_book_name_and_type VALUES
+    -> ('first contact','Friends'),
+    -> ('second contact','Family'),
+    -> ('third contact','Professional');
+```
+### insert into contacts
+```
+ INSERT INTO Contacts VALUES
+    ->  ('sreeja','godishala','first contact','hnk','wgl','telangana','875429','srijagodishala@gmail.com',123456),
+    ->  ('aditya','burra','second contact','bank colony','karimnagar','telangana','74576573','adityareddy@gmail.com',462786),
+    ->  ('harini','varma','third contact','madhav nagar','bhopal','madhya pradesh','74372723','harinivarma@gmail.com',635314);
+```
+### view table
+```
+ select*from Contacts;
+ select*from  Address_book_name_and_type;
+```
+### retrieve person's data according to city or state
+```
+ SELECT*FROM Contacts where city='wgl';
+ SELECT*FROM Contacts where State='madhya pradesh';
+ SELECT*FROM Contacts where Address_book_name=(SELECT Address_book_name FROM Address_book_name_And_type where Address_book_type='Family');
+```
+### Ability to understand the size of address book by City and State
+```
+SELECT City,COUNT(City) FROM Contacts GROUP BY City;
+ SELECT State,COUNT(State) FROM Contacts GROUP BY State;
+```
+### Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+```
+ SELECT *FROM Contacts where City='karimangar' GROUP BY first_name;
+```
+### Ability to get number of contact persons i.e. count by type
+```
+SELECT Address_book_name_And_type.Address_book_type,COUNT(Address_book_name_And_type.Address_book_type) FROM Address_book_name_And_type INNER JOIN Contacts ON
+    -> Address_book_name_And_type.Address_book_name=Contacts.Address_book_name;
+```
 
